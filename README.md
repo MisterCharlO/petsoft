@@ -34,3 +34,113 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Install librairies
+
+### Shadcn UI
+
+This install also other depedencies like cn(), radix-ui
+[Shadcn]
+(https://ui.shadcn.com/docs/installation/next)
+
+```bash
+npx shadcn@latest init
+```
+
+Ex. command :
+
+```bash
+npx shadcn@latest add button
+```
+
+## Prisma ORM
+
+This install Prisma using SQLite
+[Prisma]
+(https://www.prisma.io/docs/getting-started/quickstart-sqlite)
+
+```bash
+npm init -y
+npm install typescript ts-node @types/node --save-dev
+```
+
+```bash
+npm install prisma --save-dev
+```
+
+```bash
+npx prisma init --datasource-provider sqlite
+```
+
+Create your data models in schema.prisma before push
+
+```bash
+npx prisma db push
+```
+
+To see your database in Prisma Studio
+
+```bash
+npx prisma studio
+```
+
+Create db.ts file into lib folder to instantiate Prisma client only once
+
+Create a seed.ts file into prisma folder to create dummy data into DB
+Add seed script into package.json
+`"prisma": {
+    "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
+},`
+
+## React Hook Form
+
+Performant, flexible and extensible forms with easy-to-use validation.
+[ReactHookForm]
+(https://react-hook-form.com/get-started)
+
+```bash
+npm install react-hook-form
+```
+
+## Zod
+
+TypeScript-first schema validation with static type inference
+[Zod]
+(https://zod.dev/)
+
+```bash
+npm install zod
+```
+
+```bash
+npm install @hookform/resolvers
+```
+
+## Production Deployment
+
+Change SQLite to Vercel Postgres
+[Vercel]
+(https://vercel.com/)
+
+Create new Vercel Database: Storage > Create database
+Change Prisma database source in schema.prisma
+Update environment variables in .env for DB
+Prisma Seed into new DB
+
+```
+npx prisma db push
+```
+
+```
+npx prisma db seed
+```
+
+Add one script for Prisma
+
+```
+"postinstall": "prisma generate"
+```
+
+Push project on GitHub (asssure .env not in repo)
+Copy environment variables in Vercel Settings
+
