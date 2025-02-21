@@ -129,13 +129,13 @@ Change SQLite to Vercel Postgres
 [Vercel]
 (https://vercel.com/)
 
-Create new Vercel Database: Storage > Create database
+1. Create new Vercel Database: Storage > Create database
 
-Change Prisma database source in schema.prisma
+2. Change Prisma database source in schema.prisma
 
-Update environment variables in .env for DB
+3. Update environment variables in .env for DB
 
-Prisma Seed into new DB
+4. Prisma Seed into new DB
 
 ```
 npx prisma db push
@@ -145,11 +145,11 @@ npx prisma db push
 npx prisma db seed
 ```
 
-Add one script for Prisma
+5. Add one script for Prisma
 
 `"postinstall": "prisma generate"`
 
-Push project on GitHub (asssure .env not in repo)
+6. Push project on GitHub (asssure .env not in repo)
 
-Copy environment variables in Vercel Settings
+7. Create new Vercel project from GitHub and copy environment variables in Vercel Settings
 
