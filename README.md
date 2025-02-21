@@ -40,6 +40,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ### Shadcn UI
 
 This install also other depedencies like cn(), radix-ui
+
 [Shadcn]
 (https://ui.shadcn.com/docs/installation/next)
 
@@ -53,9 +54,10 @@ Ex. command :
 npx shadcn@latest add button
 ```
 
-## Prisma ORM
+### Prisma ORM
 
 This install Prisma using SQLite
+
 [Prisma]
 (https://www.prisma.io/docs/getting-started/quickstart-sqlite)
 
@@ -87,14 +89,17 @@ npx prisma studio
 Create db.ts file into lib folder to instantiate Prisma client only once
 
 Create a seed.ts file into prisma folder to create dummy data into DB
+
 Add seed script into package.json
+
 `"prisma": {
     "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
 },`
 
-## React Hook Form
+### React Hook Form
 
 Performant, flexible and extensible forms with easy-to-use validation.
+
 [ReactHookForm]
 (https://react-hook-form.com/get-started)
 
@@ -102,9 +107,10 @@ Performant, flexible and extensible forms with easy-to-use validation.
 npm install react-hook-form
 ```
 
-## Zod
+### Zod
 
 TypeScript-first schema validation with static type inference
+
 [Zod]
 (https://zod.dev/)
 
@@ -119,12 +125,16 @@ npm install @hookform/resolvers
 ## Production Deployment
 
 Change SQLite to Vercel Postgres
+
 [Vercel]
 (https://vercel.com/)
 
 Create new Vercel Database: Storage > Create database
+
 Change Prisma database source in schema.prisma
+
 Update environment variables in .env for DB
+
 Prisma Seed into new DB
 
 ```
@@ -137,10 +147,9 @@ npx prisma db seed
 
 Add one script for Prisma
 
-```
-"postinstall": "prisma generate"
-```
+`"postinstall": "prisma generate"`
 
 Push project on GitHub (asssure .env not in repo)
+
 Copy environment variables in Vercel Settings
 
