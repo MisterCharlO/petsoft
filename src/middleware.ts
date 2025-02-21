@@ -1,5 +1,5 @@
 import NextAuth from "next-auth";
-import { nextAuthEdgeConfig } from "./lib/auth";
+import { nextAuthEdgeConfig } from "./lib/auth-edge";
 
 export default NextAuth(nextAuthEdgeConfig).auth;
 
