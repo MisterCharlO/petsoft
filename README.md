@@ -31,6 +31,26 @@
 
 ---
 
+## 📸 Aperçus
+
+### 🏠 Page d’accueil
+![Homepage](./public/screenshots/petsoft_home.png)
+
+### 🔐 Connexion/Inscription
+![Login](./public/screenshots/petsoft_login.png)
+![Register](./public/screenshots/petsoft_signup.png)
+![Register](./public/screenshots/petsoft_signup_access.png)
+
+### 💳 Paiement
+![Payment](./public/screenshots/petsoft_payment.png)
+
+### 📊 Tableau de bord
+![Dashboard](./public/screenshots/petsoft_dashboard.png)
+![Dashboard](./public/screenshots/petsoft_dashboard_edit.png)
+![Dashboard](./public/screenshots/petsoft_account.png)
+
+---
+
 ## 📂 Installation locale
 
 ```bash
